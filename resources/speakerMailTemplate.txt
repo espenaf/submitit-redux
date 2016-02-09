@@ -6,8 +6,8 @@ Thank you for submitting your presentation titled "%title%".
 
 Best regards,
 
-JavaZone Programme Committee
-program@java.no
+Trondheim Developer Conference Programme Committee
+connect@trondheimdc.no
 
 
 
@@ -25,11 +25,11 @@ Summary:
 Outline:
 %outline%
 
-Language: %language% 
+Language: %language%
 
 Level: %level%
 
-Equipment: 
+Equipment:
 %equipment%
 
 Expected audience:
