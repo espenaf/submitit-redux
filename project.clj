@@ -1,8 +1,8 @@
-(defproject submitit "1.0.0-SNAPSHOT"
+(defproject submitit "1.0.TDC"
   :description "FIXME: write description"
   :repositories [["central-proxy" "http://repository.sonatype.org/content/repositories/central/"]]
   :dependencies [
-  	[org.clojure/clojure "1.5.1"] 
+  	[org.clojure/clojure "1.5.1"]
   	[org.apache.commons/commons-email "1.2"]
     [commons-io "2.4"]
     [commons-codec "1.7"]
