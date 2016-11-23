@@ -1,54 +1,36 @@
-Thank you for submitting your presentation titled "%title%".
+Takk for at du sendte inn presentasjon med tittel "%title%".
 
 %talkmess%
 
-(If you have uploaded a picture you can review this at the given page)
+(Hvis du har lastet opp bilde så kan dette ses her)
 
-Best regards,
+Hilsen,
 
-Trondheim Developer Conference Programme Committee
-connect@trondheimdc.no
+Programkomiteen for Sikkerhet og Sårbarhet
+espfos@kantega.no
 
 
 
-The following has been registered:
+Følgende har blitt registrer:
 
-Format: %presentationType%
-Title: %title%
+Tittel: %title%
 
-Abstract:
+Innhold:
 %abstract%
 
-Summary:
+Kort beskrivelse:
 %highlight%
 
-Outline:
+Agenda:
 %outline%
 
-Language: %language%
-
-Level: %level%
-
-Equipment:
+Utstyr:
 %equipment%
 
-Expected audience:
-%expectedAudience%
-
-Category:
-%selectedTopic%
-
-Tags:
-%atalkTags%
-
-Type of talk:
-%selectedType%
-
-Speakers:
+Foredragsholder(e):
 %tspeakers
-Name: %speakerName%
-Email: %email%
-Post code: %zipCode%
-Speakers profile:
+Navn: %speakerName%
+E-post: %email%
+Om meg:
 %bio%
 t%
