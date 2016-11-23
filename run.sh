@@ -5,6 +5,7 @@ SMTP_LIB=.lib/DevNullSmtp.jar
 export SUBMITIT_SETUP_FILE=`pwd -P`/config
 
 if [ ! -e "$SMTP_LIB" ]; then
+  mkdir -p .lib
   wget http://www.aboutmyip.com/AboutMyXApp/DevNullSmtp.jar -O $SMTP_LIB
 fi
 if [ -f ".smtp.pid" ]; then 
