@@ -1,4 +1,4 @@
-(defproject submitit "1.0.TDC"
+(defproject submitit "1.0.SOS"
   :description "FIXME: write description"
   :repositories [["central-proxy" "http://repository.sonatype.org/content/repositories/central/"]]
   :dependencies [
