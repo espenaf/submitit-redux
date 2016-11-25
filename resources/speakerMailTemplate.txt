@@ -7,7 +7,7 @@ Takk for at du sendte inn presentasjon med tittel "%title%".
 Hilsen,
 
 Programkomiteen for Sikkerhet og Sårbarhet
-espfos@kantega.no
+program@soskonf.no
 
 
 
