@@ -129,6 +129,58 @@
 
       <div class="section container cf">
         <div class="sub-section cf">
+          <h1 class="section-header">Tilleggsinformasjon</h1>
+          <div class="section-content">
+            <div class="input-section">
+              <h4>Kategori</h4>
+              <p class="help">Velg hvilken kategori din presentasjon passer best i.</p>
+              <p>
+              <div class="choice" ng-repeat="topic in topicList">
+                <label>
+                  <input type="radio" ng-model="$parent.talk.selectedTopic" value="{{topic.value}}" name="topicgroup" ng-change="topicChanged(topic.value)"/>
+                  <div class="label"><span>{{topic.value}}</span> {{topic.description}}</div>
+                </label>
+              </div>
+              </p>
+            </div>
+            <div class="input-section">
+              <h4>Stikkord</h4>
+              <p class="help">Velg <strong>maksimalt to stikkord</strong> som kan hjelpe tilhørerne å vite hva du vil snakke om. Gjerne lag egne stikkord hvis ingenting passer.</p>
+              <p>
+              <div class="choice" ng-repeat="atag in tagList">
+                <label>
+                  <input type="checkbox" class="tagCheckbox" ng-model="atag.checked" id="{{atag.value}}" />
+                  <div class="label"><span>{{atag.value}}</span></div>
+                </label>
+              </div>
+              <div class="choice" ng-show="talk.selectedTopic">
+                <label class="customtag">
+                  <input type="checkbox" class="tagCheckbox" ng-model="customChecked" />
+                  <div class="label"><input type="text" ng-model="customTag" placeholder="...or write your own custom tag"></div>
+                </label>
+              </div>
+              <div class="tagexplanation" ng-show="!talk.selectedTopic">Please select a category above to see the tags relevant to that category.</div>
+              </p>
+            </div>
+            <div class="input-section">
+              <h4>Type presentasjon</h4>
+              <p class="help">To help the audience understand the type of talk you will be giving, mark your talk with one of these types.</p>
+              <p>
+              <div class="choice" ng-repeat="mytype in typeList">
+                <label>
+                  <input type="radio" ng-model="$parent.talk.selectedType" value="{{mytype.value}}" name="typeGroup" />
+                  <div class="label"><span>{{mytype.value}}</span> {{mytype.description}}</div>
+                </label>
+              </div>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="section container cf">
+        <div class="sub-section cf">
           <h1 class="section-header">Informasjon til programkomiteen</h1>
           <div class="section-content">
             <div class="input-section">

@@ -1,306 +1,162 @@
 {
   "topics": [
     {
-      "value": "Architecture",
-      "description": "Talks about design, scalability or architecture in general.",
+      "value": "Applikasjonssikkerhet",
+      "description": "Presentasjoner om sikkerhet, trusler og forvaltning av sikkerhet i applikasjoner",
       "checked": false,
       "tags": [
-	{
-	  "value": "Architecture in Practice",
-	  "checked": false
-	},
-	{
-	  "value": "Application Architecture",
-	  "checked": false
-	},
-	{
-	  "value": "Designs",
-	  "checked": false
-	},
-	{
-	  "value": "Scalability",
-	  "checked": false
-	},
-	{
-	  "value": "Security",
-	  "checked": false
-	},
-	{
-	  "value": "IoT",
-	  "checked": false
-	},
-	{
-	  "value": "BigData",
-	  "checked": false
-	},
-	{
-	  "value": "React",
-	  "checked": false
-	}
+        {
+          "value": "DevOps",
+          "checked": false
+        },
+        {
+          "value": "Kontinuerlig utrulling",
+          "checked": false
+        },
+        {
+          "value": "OWASP",
+          "checked": false
+        }
       ]
     },
     {
-      "value": "Java platforms",
-      "description": "Talks about aspects on the different java platforms (SE, ME, EE), jvm langugages, performance or other java core topics.",
+      "value": "Hendelser / Angrep",
+      "description": "Presentasjoner om hendelse eller angrep",
       "checked": false,
       "tags": [
-	{
-	  "value": "Core Java",
-	  "checked": false
-	},
-	{
-	  "value": "Memory",
-	  "checked": false
-	},
-	{
-	  "value": "APIs",
-	  "checked": false
-	},
-	{
-	  "value": "Performance",
-	  "checked": false
-	},
-	{
-	  "value": "Java SE",
-	  "checked": false
-	},
-	{
-	  "value": "Java EE",
-	  "checked": false
-	},
-	{
-	  "value": "Java ME",
-	  "checked": false
-	},
-	{
-	  "value": "Scala",
-	  "checked": false
-	},
-	{
-	  "value": "Clojure",
-	  "checked": false
-	},
-	{
-	  "value": "Functional",
-	  "checked": false
-	},
-	{
-	  "value": "Security",
-	  "checked": false
-	},
-	{
-	  "value": "IoT",
-	  "checked": false
-	},
-	{
-	  "value": "BigData",
-	  "checked": false
-	},
-	{
-	  "value": "React",
-	  "checked": false
-	}
+        {
+          "value": "Advanced Persistent Threats (APT)",
+          "checked": false
+        },
+        {
+          "value": "Cryptolocker",
+          "checked": false
+        },
+        {
+          "value": "DoS",
+          "checked": false
+        },
+        {
+          "value": "Malware",
+          "checked": false
+        },
+        {
+          "value": "Phishing",
+          "checked": false
+        },
+        {
+          "value": "Øvelse",
+          "checked": false
+        }
       ]
     },
     {
-      "value": "Backend",
-      "description": "Talks about (Big) Data, Integration, Server, Cloud, NoSQL",
+      "value": "Personvern",
+      "description": "Presentasjoner om regulering, implementasjon og erfaring med ulike typer personvern",
       "checked": false,
       "tags": [
-	{
-	  "value": "Integration",
-	  "checked": false
-	},
-	{
-	  "value": "Server",
-	  "checked": false
-	},
-	{
-	  "value": "Cloud",
-	  "checked": false
-	},
-	{
-	  "value": "NoSql",
-	  "checked": false
-	},
-	{
-	  "value": "Security",
-	  "checked": false
-	},
-	{
-	  "value": "IoT",
-	  "checked": false
-	},
-	{
-	  "value": "BigData",
-	  "checked": false
-	},
-	{
-	  "value": "React",
-	  "checked": false
-	}
+        {
+          "value": "EUs personvernsforordning",
+          "checked": false
+        },
+        {
+          "value": "Personopplysninger",
+          "checked": false
+        },
+        {
+          "value": "Helse",
+          "checked": false
+        },
+        {
+          "value": "Privacy Shield",
+          "checked": false
+        }
       ]
     },
     {
-      "value": "Frontend",
-      "description": "Everything frontend. UX, UI, Apps, Mobile, Responsive, etc.",
+      "value": "Sikkerhetskultur",
+      "description": "Presentasjoner om kultur, opplæring, øvelser osv.",
       "checked": false,
       "tags": [
-	{
-	  "value": "UX",
-	  "checked": false
-	},
-	{
-	  "value": "Web Technologies",
-	  "checked": false
-	},
-	{
-	  "value": "Apps",
-	  "checked": false
-	},
-	{
-	  "value": "Mobile",
-	  "checked": false
-	},
-	{
-	  "value": "Responsive Design",
-	  "checked": false
-	},
-	{
-	  "value": "JavaScript",
-	  "checked": false
-	},
-	{
-	  "value": "Security",
-	  "checked": false
-	},
-	{
-	  "value": "IoT",
-	  "checked": false
-	},
-	{
-	  "value": "BigData",
-	  "checked": false
-	},
-	{
-	  "value": "React",
-	  "checked": false
-	}
+        {
+          "value": "Bevisstgjøring",
+          "checked": false
+        },
+        {
+          "value": "Holdningskampanje",
+          "checked": false
+        },
+        {
+          "value": "Opplæring / Trening",
+          "checked": false
+        },
+        {
+          "value": "Øvelse",
+          "checked": false
+        }
       ]
     },
     {
-      "value": "Concepts / Theory",
-      "description": "Talks about concepts and theory in computer science.",
+      "value": "Styringsystem / Arkitektur",
+      "description": "Presentasjoner om styringssystemer, internkontroll, arkitektur, policyer osv.",
       "checked": false,
       "tags": [
-	{
-	  "value": "Programming languages",
-	  "checked": false
-	},
-	{
-	  "value": "Features in Languages",
-	  "checked": false
-	},
-	{
-	  "value": "Paradigms",
-	  "checked": false
-	},
-	{
-	  "value": "Security",
-	  "checked": false
-	},
-	{
-	  "value": "IoT",
-	  "checked": false
-	},
-	{
-	  "value": "BigData",
-	  "checked": false
-	},
-	{
-	  "value": "React",
-	  "checked": false
-	}
+        {
+          "value": "Cyberforsikring",
+          "checked": false
+        },
+        {
+          "value": "Internkontroll",
+          "checked": false
+        },
+        {
+          "value": "ISO 27000 serien",
+          "checked": false
+        },
+        {
+          "value": "Policy",
+          "checked": false
+        },
+        {
+          "value": "Risikostyring",
+          "checked": false
+        }
       ]
     },
     {
-      "value": "Craftmanship",
-      "description": "Clean Code, Continuous Delivery, DevOps or similiar.",
+      "value": "Annet",
+      "description": "Hvis presentasjonen ikke passer i noen av kategoriene, så er dette stedet",
       "checked": false,
       "tags": [
-	{
-	  "value": "Clean Code",
-	  "checked": false
-	},
-	{
-	  "value": "Continuous Delivery",
-	  "checked": false
-	},
-	{
-	  "value": "DevOps",
-	  "checked": false
-	},
-	{
-	  "value": "Security",
-	  "checked": false
-	},
-	{
-	  "value": "IoT",
-	  "checked": false
-	},
-	{
-	  "value": "BigData",
-	  "checked": false
-	},
-	{
-	  "value": "React",
-	  "checked": false
-	}
+        {
+          "value": "Digitalisering",
+          "checked": false
+        },
+        {
+          "value": "Offentlig forvaltning",
+          "checked": false
+        }
       ]
-    },
-    {
-      "value": "Other Awesomeness",
-      "description": "If your proposed talk doesn't fit nicely into the main categories",
-      "checked": false,
-      "tags": [
-	{
-	  "value": "Security",
-	  "checked": false
-	},
-	{
-	  "value": "IoT",
-	  "checked": false
-	},
-	{
-	  "value": "BigData",
-	  "checked": false
-	},
-	{
-	  "value": "React",
-	  "checked": false
-	}
-      ]
-    }    
-  ],
+    }  ],
   "types": [
     {
-      "value": "Experience reports",
-      "description": "Case Descriptions, Retrospectives",
+      "value": "Erfaringsforedrag",
+      "description": "Prosjekter, hendelser",
       "checked": false
     },
     {
-      "value": "Research Innovation",
-      "description": "New Technologies, Findings",
+      "value": "Forskning / Innovasjon",
+      "description": "Nye teknologier, forskningsresultat",
       "checked": false
     },
     {
-      "value": "Knowledge Practice",
-      "description": "How-tos, Introductions, Technical White Papers",
+      "value": "Beste praksis",
+      "description": "How-tos, introduksjon, standarder, policyer",
       "checked": false
     },
     {
-      "value": "Wisdom",
-      "description": "Experience over time, Opinions, Evangelism",
+      "value": "Visdom",
+      "description": "Erfaring over tid, meninger",
       "checked": false
     }
   ]
