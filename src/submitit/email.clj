@@ -5,8 +5,8 @@
 
 (defn generate-mail-talk-mess [talk-result]
   (if (talk-result :submitError)
-    (str "Due to an error you can not review your talk at this time. We will send you another email when we have fixed this. Error " (talk-result :submitError))
-    (str "You can access the submitted presentation at " (read-setup :serverhostname) "/talkDetail?talkid=" (talk-result :resultid))))
+    (str "Pga. en feil så kan vi ikke vurdere presentasjonen din nå. Du vil motta en e-post når feilen er rettet. Feil " (talk-result :submitError))
+    (str "Du kan redigere din presentasjon på " (read-setup :serverhostname) "/talkDetail?talkid=" (talk-result :resultid))))
 
 
 (defn speaker-mail-list [talk]
@@ -26,7 +26,7 @@
       (.setHostName (read-setup :hostname))
       (.setSslSmtpPort (read-setup :smtpport))
       (.setSSL true)
-      (.setFrom (read-setup :mailFrom) "Javazone program commitee")
+      (.setFrom (read-setup :mailFrom) "Programkomiteen for Sikkerhet og Sårbarhet")
       (.setSubject subject)
       (.setAuthentication (read-setup :user) (read-setup :password))
       (.setMsg message)
@@ -34,7 +34,7 @@
   (doto (org.apache.commons.mail.SimpleEmail.)
       (.setHostName (read-setup :hostname))
       (.setSmtpPort (Integer/parseInt (read-setup :smtpport)))
-      (.setFrom (read-setup :mailFrom) "Javazone program commitee")
+      (.setFrom (read-setup :mailFrom) "Programkomiteen for Sikkerhet og Sårbarhet")
       (.setSubject subject)
       (.setMsg message)
       )  

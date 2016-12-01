@@ -185,16 +185,16 @@
 (defn validate-speaker-fields [speakers]
   (if (empty? speakers) nil
     (let [speaker (first speakers) errormsg (cond 
-      (para-error? (speaker "speakerName")) "Speaker name is required"
-      (para-error? (speaker "email")) "Email is required"
-      (para-error? (speaker "bio")) "Speaker bio"      
+      (para-error? (speaker "speakerName")) "Navn på foredragsholder er påkrevd"
+      (para-error? (speaker "email")) "E-post er påkrevd"
+      (para-error? (speaker "bio")) "Om deg er påkrevd"
       :else nil)
       ]
       (if errormsg errormsg (validate-speaker-fields (rest speakers))))))
 
 (defn validate-unique-email [speakers]
   (let [all-mails (map #(% "email") speakers)]
-    (if (= (count all-mails) (count (set all-mails))) nil "Speakers must have different email")))
+    (if (= (count all-mails) (count (set all-mails))) nil "Foredragsholdere kan ikke ha samme e-post adresse")))
 
 (defn validate-speaker-input [speakers]
   (let [speak-field-error (validate-speaker-fields speakers)]
@@ -225,18 +225,18 @@
 (defn validate-input [talk]
   (let [error-msg 
     (cond 
-    (not (submit-open? talk)) "You need to provide correct password since submit is closed"
-    (para-error? (talk "abstract")) "Abstract is required"
-    (para-error? (talk "presentationType")) "Presentationtype is required"
-    (para-error? (talk "language")) "language is required"
-    (para-error? (talk "level")) "level is required"
-    (para-error? (talk "outline")) "outline is required"
-    (para-error? (talk "title")) "Title is required"
-    (para-error? (talk "highlight")) "highlight is required"
+    (not (submit-open? talk)) "Du må benytte et passord nå som innsending er stengt"
+    (para-error? (talk "abstract")) "Beskrivelse av innhold er påkrevd"
+    (para-error? (talk "presentationType")) "Type foredrag er påkreved"
+    (para-error? (talk "language")) "Språk er påkrevd"
+    (para-error? (talk "level")) "Nivå er påkrevd"
+    (para-error? (talk "outline")) "Agenda er påkrevd"
+    (para-error? (talk "title")) "Tittel er påkrevd"
+    (para-error? (talk "highlight")) "Kort beskrivelse er påkrevd"
     (para-error? (talk "expectedAudience")) "Expected audience is required"
       (illegal-keywords? (talk "talkTags")) "Illegal characters in keyword"
-    (< (count (talk "speakers")) 1) "One speaker must be added"  
-    (> (count (talk "speakers")) 2) "Max 2 speakers is allowed"
+    (< (count (talk "speakers")) 1) "En foredragsholder må være lagt til"
+    (> (count (talk "speakers")) 2) "Maks 2 foredragsholdere"
     :else (validate-speaker-input (talk "speakers"))
   )]
   (if error-msg (generate-string {:errormessage error-msg}) nil)))
