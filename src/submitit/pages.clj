@@ -61,7 +61,7 @@
       (if error-response error-response
         (let [talk-result (communicate-talk-to-ems talk session)]
           (timbre/trace "TALKRES:" talk-result)
-          (send-mail (speaker-mail-list talk) (str "Confirmation " (if (exsisting-talk? talk) "on updating" "of") " your JavaZone 2015 submission \"" (talk "title") "\"") (generate-mail-text (slurp (clojure.java.io/resource "speakerMailTemplate.txt"))
+          (send-mail (speaker-mail-list talk) (str "Bekreftelse " (if (exsisting-talk? talk) "på redigering av" "på") " Sikkerhet og Sårbarhet 2017 innsending \"" (talk "title") "\"") (generate-mail-text (slurp (clojure.java.io/resource "speakerMailTemplate.txt"))
                                                                                                                                                                              (assoc talk "talkmess" (generate-mail-talk-mess talk-result))))
           (generate-string (merge talk-result
                              (if (talk-result :submitError) {:retError true :addr "xxx"}
@@ -162,16 +162,16 @@
 
     (let [photo-byte-arr (to-byte-array (filehandler :tempfile)) photo-content-type (filehandler :content-type) photo-filename (filehandler :filename)]
       (cond
-        (> (count photo-byte-arr) 500000) (upload-form "Picture too large (max 500k)" speakerKey dummyKey false)
+        (> (count photo-byte-arr) 500000) (upload-form "Bilde for stort (maks 500k)" speakerKey dummyKey false)
         (empty? speakerKey) {:session (assoc session dummyKey {:photo-byte-arr photo-byte-arr :photo-content-type photo-content-type :photo-filename photo-filename})
-                             :body (upload-form (str "Picture uploaded: " (filehandler :filename)) speakerKey dummyKey true)
+                             :body (upload-form (str "Bilde lastet opp: " (filehandler :filename)) speakerKey dummyKey true)
                              }
 
         :else (do
                 (add-photo (str (decode-string speakerKey) "/photo") photo-byte-arr photo-content-type photo-filename)
                 {
                   :session (assoc session dummyKey {:photo-byte-arr photo-byte-arr :photo-content-type photo-content-type :photo-filename photo-filename})
-                  :body (upload-form (str "Picture uploaded: " (filehandler :filename)) speakerKey dummyKey true)
+                  :body (upload-form (str "Bilde lastet opp: " (filehandler :filename)) speakerKey dummyKey true)
                   })
         ))
 
