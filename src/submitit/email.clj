@@ -6,7 +6,7 @@
 (defn generate-mail-talk-mess [talk-result]
   (if (talk-result :submitError)
     (str "Pga. en feil så kan vi ikke vurdere presentasjonen din nå. Du vil motta en e-post når feilen er rettet. Feil " (talk-result :submitError))
-    (str "Du kan redigere din presentasjon på " (read-setup :serverhostname) "/talkDetail?talkid=" (talk-result :resultid))))
+    (str "Du kan redigere din presentasjon på " (read-setup :serverHostname) "/talkDetail?talkid=" (talk-result :resultid))))
 
 
 (defn speaker-mail-list [talk]

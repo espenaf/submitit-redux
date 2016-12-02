@@ -65,7 +65,7 @@
                                                                                                                                                                              (assoc talk "talkmess" (generate-mail-talk-mess talk-result))))
           (generate-string (merge talk-result
                              (if (talk-result :submitError) {:retError true :addr "xxx"}
-                               {:retError false :addr (str (read-setup :serverhostname) "/talkDetail?talkid=" (talk-result :resultid))})))
+                               {:retError false :addr (str (read-setup :serverHostname) "/talkDetail?talkid=" (talk-result :resultid))})))
           ))
       )
     )
