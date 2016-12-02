@@ -30,14 +30,16 @@
       (.setSubject subject)
       (.setAuthentication (read-setup :user) (read-setup :password))
       (.setMsg message)
-      )  
+      (.setCharset "ISO-8859-15")
+      )
   (doto (org.apache.commons.mail.SimpleEmail.)
       (.setHostName (read-setup :hostname))
       (.setSmtpPort (Integer/parseInt (read-setup :smtpport)))
       (.setFrom (read-setup :mailFrom) "Programkomiteen for Sikkerhet og Sårbarhet")
       (.setSubject subject)
       (.setMsg message)
-      )  
+      (.setCharset "ISO-8859-15")
+      )
 
   ))
 
