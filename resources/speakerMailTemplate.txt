@@ -2,7 +2,7 @@ Takk for at du sendte inn presentasjon med tittel "%title%".
 
 %talkmess%
 
-(Hvis du har lastet opp bilde så kan dette ses her)
+(Hvis du har lastet opp bilde så kan dette ses på siden over)
 
 Hilsen,
 
