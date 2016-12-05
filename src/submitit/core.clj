@@ -234,7 +234,7 @@
     (para-error? (talk "title")) "Tittel er påkrevd"
     (para-error? (talk "highlight")) "Kort beskrivelse er påkrevd"
     ;(para-error? (talk "expectedAudience")) "Expected audience is required"
-      (illegal-keywords? (talk "talkTags")) "Illegal characters in keyword"
+      (illegal-keywords? (talk "talkTags")) "Ulovlige tegn i stikkord"
     (< (count (talk "speakers")) 1) "En foredragsholder må være lagt til"
     (> (count (talk "speakers")) 2) "Maks 2 foredragsholdere"
     :else (validate-speaker-input (talk "speakers"))

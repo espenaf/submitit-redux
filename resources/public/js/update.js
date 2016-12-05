@@ -88,7 +88,7 @@ angular.module('submititapp', [])
             highlight: "",
             equipment: "",
             talkTags: [],
-            expectedAudience: "",
+            expectedAudience: "all",
             captchaFact: captchaFact,
             captchaAnswer: "",
             password: "",
@@ -117,7 +117,7 @@ angular.module('submititapp', [])
             $scope.needPassword = data.needPassword;
         }).
         error(function(data, status, headers, config) {
-            console.log("Error fetching password neeeded");
+            console.log("Error fetching password needed");
         });
 
     }
@@ -240,17 +240,17 @@ angular.module('submititapp', [])
         };
 
         if (!$scope.talk.selectedType || $scope.talk.selectedType === null || $scope.talk.selectedType === "") {
-            displayUserError("Please select a type of talk");
+            displayUserError("Vennligst velg en type presentasjon");
             return false;
         }
 
         if (!$scope.talk.selectedTopic || $scope.talk.selectedTopic === null || $scope.talk.selectedTopic === "") {
-            displayUserError("Please select a talk topic");
+            displayUserError("Vennligst velg en kategori");
             return false;
         }
 
         if ($scope.customChecked && !$scope.customTag.match(/^[A-Za-z0-9 æøåÆØÅ]+$/)) {
-            displayUserError("Please dont use special characters in your tag (only letters and digits)");
+            displayUserError("Vennligst ikke benytt spesielle tegn i stikkord (kun bokstaver og tall)");
             return false;
         }
 
@@ -274,7 +274,7 @@ angular.module('submititapp', [])
         }
 
         if (talkTags.length > 2 || talkTags.length < 1) {
-            displayUserError("Please select one or two tags");
+            displayUserError("Vennligst velg en eller to stikkord");
             return false;
         }
 
