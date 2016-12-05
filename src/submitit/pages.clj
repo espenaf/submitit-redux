@@ -230,13 +230,15 @@
 
 
 (defroutes main-routes
-  (GET "/" [] (response-util/resource-response "index.html" {:root "public"}))
+  (GET "/" [] (response-util/content-type
+               (response-util/resource-response "index.html" {:root "public"})
+               "text/html; charset=utf-8"))
   (GET "/newSpeakerId" [] (new-speaker-id))
   (GET "/tagCollection" [] (generate-string (tag-list)))
   (GET "/loadCaptcha" {session :session} (load-captcha session))
   (GET "/captcha" {session :session} (captcha session))
   (POST "/addTalk" {body :body session :session} (add-talk (parse-string (slurp body)) session))
-  (GET "/talkJson/:talkid"  request (json-talk ((request :route-params) :talkid)))
+  (GET "/talkJson/:talkid" request (json-talk ((request :route-params) :talkid)))
   (GET "/needPassword" [] (generate-string {:needPassword (need-submit-password?)}))
   ;(GET "/status" [] (status-page))
   (GET "/uploadPicture" request (upload-picture request))
@@ -244,10 +246,9 @@
   (GET "/speakerPhoto" request (speaker-photo request))
   (GET "/tempPhoto" request (temp-photo request))
   (GET "/savedPic" request (saved-picture request))
-  (GET "/talkDetail" request (redir-talk-detail request))
-  (route/resources "/")
-  (route/not-found {:status 404 :body "404 Not Found"})
-  )
+  (GET "/talkDetail" [] (response-util/content-type
+                         (response-util/resource-response "talkDetail.html" {:root "public"})
+                         "text/html; charset=utf-8"))
 
 
 (defn start-jetty []
