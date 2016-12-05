@@ -20,7 +20,7 @@
       ]
     },
     {
-      "value": "Hendelser / Angrep",
+      "value": "Hendelser eller Angrep",
       "description": "Presentasjoner om hendelse eller angrep",
       "checked": false,
       "tags": [
@@ -87,7 +87,7 @@
           "checked": false
         },
         {
-          "value": "Opplæring / Trening",
+          "value": "Opplæring eller Trening",
           "checked": false
         },
         {
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "value": "Styringsystem / Arkitektur",
+      "value": "Styringsystem eller Arkitektur",
       "description": "Presentasjoner om styringssystemer, internkontroll, arkitektur, policyer osv.",
       "checked": false,
       "tags": [
@@ -145,7 +145,7 @@
       "checked": false
     },
     {
-      "value": "Forskning / Innovasjon",
+      "value": "Forskning eller Innovasjon",
       "description": "Nye teknologier, forskningsresultat",
       "checked": false
     },
