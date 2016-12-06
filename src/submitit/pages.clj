@@ -219,6 +219,16 @@
 
   ))
 
+
+
+(defn redir-talk-detail [request]
+  (let [talkid (((ring-params/params-request request) :query-params) "talkid")]
+    (if talkid
+    (response-util/redirect (str "talkDetail.html?talkid=" talkid))
+    (response-util/redirect "talkDetail.html"))
+  ))
+
+
 (defroutes main-routes
   (GET "/" [] (response-util/content-type
                 (response-util/resource-response "index.html" {:root "public"})
