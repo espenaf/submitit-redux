@@ -1,6 +1,41 @@
 {
   "topics": [
     {
+      "value": "Sikker praksis",
+      "description": "Presentasjoner om erfaring med og etablering av sikker praksis, som sikkerhetskultur, opplæring, involvering osv",
+      "checked": false,
+      "tags": [
+        {
+          "value": "Bevisstgjøring",
+          "checked": false
+        },
+        {
+          "value": "Holdningskampanje",
+          "checked": false
+        },
+        {
+          "value": "Involvering",
+          "checked": false
+        },
+        {
+          "value": "Opplæring og trening",
+          "checked": false
+        },
+        {
+          "value": "Sikkerhetskultur",
+          "checked": false
+        },
+        {
+          "value": "Varsling",
+          "checked": false
+        },
+        {
+          "value": "Øvelse",
+          "checked": false
+        }
+      ]
+    },
+    {
       "value": "Applikasjonssikkerhet",
       "description": "Presentasjoner om sikkerhet, trusler og forvaltning av sikkerhet i applikasjoner",
       "checked": false,
@@ -20,8 +55,8 @@
       ]
     },
     {
-      "value": "Hendelser eller Angrep",
-      "description": "Presentasjoner om hendelse eller angrep",
+      "value": "Hendelser og angrep",
+      "description": "Presentasjoner om hendelser og  angrep",
       "checked": false,
       "tags": [
         {
@@ -69,29 +104,6 @@
         },
         {
           "value": "Privacy Shield",
-          "checked": false
-        }
-      ]
-    },
-    {
-      "value": "Sikkerhetskultur",
-      "description": "Presentasjoner om kultur, opplæring, øvelser osv.",
-      "checked": false,
-      "tags": [
-        {
-          "value": "Bevisstgjøring",
-          "checked": false
-        },
-        {
-          "value": "Holdningskampanje",
-          "checked": false
-        },
-        {
-          "value": "Opplæring eller Trening",
-          "checked": false
-        },
-        {
-          "value": "Øvelse",
           "checked": false
         }
       ]
