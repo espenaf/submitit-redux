@@ -13,7 +13,6 @@
   (let [t (cj/create-template (merge {
     "title" (talk "title")
     "level" (talk "level")
-    "format" (talk "presentationType")
     "body" (talk "abstract")
     "audience" (talk "expectedAudience")
     "outline" (talk "outline")
@@ -23,7 +22,6 @@
     "summary" (talk "highlight")
   }
   (if (and (map? exisisting-talk) (exisisting-talk "state")) {"state" (exisisting-talk "state")} {})
-  (if (and (map? exisisting-talk) (exisisting-talk "tags")) {"tags" (exisisting-talk "tags")} {})
     ))]
     (timbre/trace "Template: " t) t))
 

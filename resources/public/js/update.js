@@ -239,16 +239,6 @@ angular.module('submititapp', [])
             $scope.userErrorMessage = message;
         };
 
-        if (!$scope.talk.selectedType || $scope.talk.selectedType === null || $scope.talk.selectedType === "") {
-            displayUserError("Vennligst velg en type presentasjon");
-            return false;
-        }
-
-        if (!$scope.talk.selectedTopic || $scope.talk.selectedTopic === null || $scope.talk.selectedTopic === "") {
-            displayUserError("Vennligst velg en kategori");
-            return false;
-        }
-
         if ($scope.customChecked && !$scope.customTag.match(/^[A-Za-z0-9 æøåÆØÅ]+$/)) {
             displayUserError("Vennligst ikke benytt spesielle tegn i stikkord (kun bokstaver og tall)");
             return false;
@@ -271,11 +261,6 @@ angular.module('submititapp', [])
 
         if ($scope.customChecked) {
             talkTags.push($scope.customTag);
-        }
-
-        if (talkTags.length > 2 || talkTags.length < 1) {
-            displayUserError("Vennligst velg en eller to stikkord");
-            return false;
         }
 
         $scope.talk.talkTags = talkTags;
