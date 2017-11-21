@@ -127,7 +127,7 @@
     [:html
     (if picChanged
       [:header
-       [:script {:src "js/jquery-1.7.2.js"}]
+       [:script {:src "js/jquery.min.js"}]
        [:script {:src "js/uploadPictureCommunication.js"}]
        ]
       )

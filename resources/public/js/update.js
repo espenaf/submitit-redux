@@ -113,10 +113,10 @@ angular.module('submititapp', [])
 
 
         $http({method: 'GET', url: "needPassword"}).
-        success(function(data, status, headers, config) {
+        then( function onSuccess(data, status, headers, config) {
             $scope.needPassword = data.needPassword;
         }).
-        error(function(data, status, headers, config) {
+        catch(function onError(data, status, headers, config) {
             console.log("Error fetching password needed");
         });
 
@@ -134,7 +134,7 @@ angular.module('submititapp', [])
     }
 
     $http({method: 'GET', url: "tagCollection"}).
-            success(function(data, status, headers, config) {
+            then( function onSuccess(data, status, headers, config) {
                 $scope.topicList = data.topics;
                 $scope.typeList = data.types;
 
@@ -142,8 +142,8 @@ angular.module('submititapp', [])
                     var jsonurl = "talkJson/" + talkid;
 
 
-                    $http({method: 'GET', url: jsonurl}).
-                        success(function(data, status, headers, config) {
+                    $http({method: 'GET', url: jsonurl})
+                        .then( function onSuccess(data, status, headers, config) {
                             $scope.showCapthca = false;
                             $scope.talk = data;
                             $scope.talk.captchaFact = captchaFact;
@@ -196,7 +196,7 @@ angular.module('submititapp', [])
 
 
             }).
-            error(function(data, status, headers, config) {
+            catch(function onError(data, status, headers, config) {
                 console.log("some error occured");
             });
 
@@ -266,37 +266,37 @@ angular.module('submititapp', [])
         $scope.talk.talkTags = talkTags;
 
 
+        $http({
+            method: 'POST',
+            url: "addTalk",
+            data: $scope.talk
+        }).then(function onSuccess(data, status, headers, config) {
+            submitBtn.button('reset');
 
+            if (data.captchaError) {
+                $scope.showCapthcaError = true;
+            } else if (data.errormessage) {
+                $scope.showMain = false;
+                $scope.showFailure = true;
+                $scope.failureError = data.errormessage;
+            } else {
+                $scope.showMain = false;
+                $scope.showResult = true;
+                $scope.talkAddress = data.addr;
+                if (data.retError) {
+                    $scope.showResultSuccess = false;
+                    $scope.showResutFailure = true;
+                } else {
+                    $scope.showResultSuccess = true;
+                    $scope.showResutFailure = false;
+                }
+            }
 
-        $http({method: 'POST', url: "addTalk", data: $scope.talk}).
-                        success(function(data, status, headers, config) {
-                            submitBtn.button('reset');
-
-                            if (data.captchaError) {
-                                $scope.showCapthcaError = true;                             
-                            } else if (data.errormessage) {
-                                $scope.showMain = false;
-                                $scope.showFailure = true;
-                                $scope.failureError = data.errormessage;
-                            } else {
-                                $scope.showMain = false;
-                                $scope.showResult = true;
-                                $scope.talkAddress = data.addr;
-                                if (data.retError) {
-                                  $scope.showResultSuccess = false;
-                                  $scope.showResutFailure = true;
-                                } else {
-                                    $scope.showResultSuccess = true;
-                                    $scope.showResutFailure = false;
-                                }
-                            }
-                            
-                        }).
-                        error(function(data, status, headers, config) {
-                            submitBtn.button('reset');
-                            $scope.showGeneralError = true;
-                            console.log("some error occured");
-                        });
+        }).catch(function onError(data, status, headers, config) {
+            submitBtn.button('reset');
+            $scope.showGeneralError = true;
+            console.log("some error occured");
+        });
         return false;
     }
 
