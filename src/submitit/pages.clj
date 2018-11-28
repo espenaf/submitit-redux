@@ -23,7 +23,7 @@
 
 
 ;(defn startup []
-;  (let [mode (server-mode) port (Integer/parseInt (get (System/getenv) "SUBMITIT_PORT" "8080"))]
+;  (let [mode (server-mode) port (Integer/parseInt (get (System/getenv) "SUBMITIT_PORT" "8090"))]
 ;    (server/start port {:mode mode
 ;                        :ns 'submitit.core})))
 
@@ -255,7 +255,7 @@
 
 (defn start-jetty []
   (let [port (read-setup :port)]
-  (jetty/run-jetty (-> main-routes session/wrap-session) {:port (if port (Integer. port) 8080)})
+  (jetty/run-jetty (-> main-routes session/wrap-session) {:port (if port (Integer. port) 8090)})
   ))
 
 

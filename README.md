@@ -20,7 +20,7 @@ The setupfile must be on the following format:
 property=value
 
 ### The following values can be set:
-* port: Port that submitit will run on. Default is 8080
+* port: Port that submitit will run on. Default is 8090
 * hostname: The hostname to the smtp server
 * smtpport: The port to the smtp server
 * user: User to logon to smtp (if any)
@@ -45,9 +45,9 @@ Frontend developer mode can be used to debug frontend pages. The server will onl
 3. Set system variable SUBMITIT_FRONTEND_MODE to true (export SUBMITIT_FRONTEND_MODE=true)
 4. lein run
 
-You will no have the following pages availible:
-http://localhost:8080/index.html
-http://localhost:8080/talkDetail.html
+You will no have the following pages available:
+http://localhost:8090/index.html
+http://localhost:8090/talkDetail.html
 
 ## License
 
